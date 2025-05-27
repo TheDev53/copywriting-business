@@ -1,0 +1,202 @@
+:root {
+  --background-color: #fafafa;
+  --base-color: white;
+  --text-color: #2e2b41;
+  --input-color: #f3f0ff;
+  --error-color: #ec3f53;
+  --accent-color: #015b51;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: Poppins, Segoe UI, sans-serif;
+  font-size: 12pt;
+  color: var(--text-color);
+  text-align: center;
+}
+body {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  background-image: url("/images/signup.jpg");
+  background-size: cover;
+  background-position: right;
+  overflow: hidden;
+}
+.container {
+  box-sizing: border-box;
+  background-color: var(--base-color);
+  height: 100vh;
+  width: max(40%, 600px);
+  padding: 10px;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  /* text-transform: uppercase; */
+  margin-right: 0px;
+  margin-bottom: 25px;
+}
+form {
+  width: min(400px, 100%);
+  margin-top: 20px;
+  margin-bottom: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+form > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+form label {
+  flex-shrink: 0;
+  height: 50px;
+  width: 50px;
+  background-color: var(--accent-color);
+  fill: var(--base-color);
+  color: var(--base-color);
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+form input {
+  box-sizing: border-box;
+  flex-grow: 1;
+  min-width: 0;
+  height: 50px;
+  padding: 1em;
+  font: inherit;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  border: 2px solid var(--input-color);
+  border-left: none;
+  background-color: var(--input-color);
+  transition: 100ms ease;
+}
+form input:hover {
+  border-color: var(--accent-color);
+}
+form input:focus {
+  outline: none;
+  border-color: var(--text-color);
+}
+div:has(input:focus) > label {
+  background-color: var(--text-color);
+}
+form input::placeholder {
+  color: var(--text-color);
+}
+form button {
+  margin-top: 10px;
+  border: none;
+  border-radius: 1000px;
+  padding: 0.85em 4em;
+  background-color: var(--accent-color);
+  color: var(--base-color);
+  font: inherit;
+  font-weight: 600;
+  /* text-transform: uppercase; */
+  cursor: pointer;
+  transition: 100ms;
+}
+form button:hover {
+  background-color: var(--text-color);
+}
+form button:focus {
+  outline: none;
+  background-color: var(--text-color);
+}
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+a:hover {
+  text-decoration: underline;
+}
+form div.incorrect label {
+  background-color: var(--error-color);
+}
+form div.incorrect input {
+  border-color: var(--error-color);
+}
+#error-message {
+  color: var(--error-color);
+}
+#link {
+  font: inherit;
+}
+#link a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+#link a:hover {
+  text-decoration: underline;
+}
+#logo {
+  display: flex;
+  position: absolute;
+  color: var(--accent-color);
+  left: 2%;
+  right: 75%;
+  bottom: 92%;
+  font-size: 1.9rem;
+  font-weight: 650;
+  text-decoration: none;
+  width: 350px;
+}
+@media (max-width: 1100px) {
+  .container {
+    width: min(600px, 100%);
+    border-radius: 0;
+    /* padding-top: 0px; */
+  }
+  #logo {
+    display: flex;
+    position: absolute;
+    left: 5%;
+    right: 60%;
+    bottom: 93%;
+    font-size: 1.5em;
+    font-weight: 625;
+    text-decoration: none;
+  }
+}
+@media (max-width: 650px) {
+  h1 {
+    margin-bottom: 10px;
+  }
+  .container {
+    width: min(600px, 100%);
+    border-radius: 0;
+    padding-top: 100px;
+    padding-bottom: 0px;
+  }
+  #logo {
+    display: flex;
+    position: absolute;
+    left: 5%;
+    right: 40%;
+    bottom: 93%;
+    font-size: 1.4em;
+    font-weight: 625;
+    text-decoration: none;
+  }
+  #link {
+    display: flex;
+    position: absolute;
+    top: 90%;
+    bottom: 0%;
+  }
+}

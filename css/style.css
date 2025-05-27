@@ -156,7 +156,7 @@ body {
   padding: 0 80px;
   max-width: 1900px;
   background: linear-gradient(to right, #f6f3ef 0%, #f6f3ef 100%);
-  background-image: url(/images/hero.jpg);
+  background-image: url(/images/hero1.jpg);
   background-size: cover;
   background-position: right;
   outline: 1px solid #e7e3dd;
@@ -170,12 +170,12 @@ body {
   background-color: #03020181;
   border-radius: 4px;
   padding: 20px;
-  width: 80%;
+  width: 100%;
   min-height: 50vh;
 }
 
 .hero__content h1 {
-  font-size: 4em;
+  font-size: 3.9em;
   cursor: default;
 }
 
