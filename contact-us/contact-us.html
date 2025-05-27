@@ -15,7 +15,29 @@
       <a href="/" id="logo">Cibolo | Copywriting</a>
       <h1>Contact Us</h1>
       <p id="error-message"></p>
-      <form id="form" action="/contact-us/send.php" method="POST" novalidate>
+      <!-- FORM -->
+      <form
+        id="form"
+        action="https://formsubmit.co/cajiao.global@gmail.com"
+        method="POST"
+        novalidate
+      >
+        <!-- ENHANCEMENTS -->
+        <input
+          type="hidden"
+          name="_subject"
+          value="New message from Cibolo | Copywriting"
+        />
+        <input type="hidden" name="_captcha" value="true" />
+        <input type="hidden" name="_template" value="box" />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://yourdomain.com/thank-you.html"
+        />
+        <input type="text" name="_honey" style="display: none" />
+        <!-- Honeypot -->
+        <!-- NAME -->
         <div>
           <label for="firstname-input">
             <svg
@@ -37,6 +59,7 @@
             placeholder="Name"
           />
         </div>
+        <!-- PHONE -->
         <div>
           <label for="phone-input"
             ><svg
@@ -51,13 +74,9 @@
               />
             </svg>
           </label>
-          <input
-            type="text"
-            name="phone"
-            id="phone-input"
-            placeholder="Phone"
-          />
+          <input type="tel" name="phone" id="phone-input" placeholder="Phone" />
         </div>
+        <!-- EMAIL -->
         <div>
           <label for="email-input">
             <span>@</span>
@@ -69,6 +88,7 @@
             placeholder="Email"
           />
         </div>
+        <!-- MESSAGE -->
         <div>
           <label for="message-input"
             ><svg
@@ -90,8 +110,10 @@
             placeholder="Message"
           />
         </div>
+        <!-- SUBMIT -->
         <button type="submit">Send Info</button>
       </form>
+      <!-- CALLBACK -->
       <p id="link">Done? <a href="/">Go back</a></p>
     </div>
   </body>
