@@ -167,16 +167,23 @@ body {
 
 .hero__content {
   color: #e7e3dd;
-  background-color: #03020181;
-  border-radius: 4px;
-  padding: 20px;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 18px;
   width: 100%;
-  min-height: 50vh;
+  min-height: 45%;
 }
 
 .hero__content h1 {
+  /* font-weight: 800; */
   font-size: 3.9em;
   cursor: default;
+}
+
+.hero__content h1,
+.hero__content p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .hero__content p {
@@ -234,53 +241,49 @@ body {
   height: 100%;
 }
 
-/* Why Choose Us */
-.why-choose-us .container {
-  display: flex;
+/* CARD */
+.card__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 0 auto 0;
+  min-height: 92.32vh;
   width: 100%;
-  justify-content: center;
-  background-color: #dfd2bf;
-  padding: 100px 20px;
-  text-align: center;
-  color: #e7e3dd;
-  outline: 1px solid #d4c8b6;
-  flex-direction: column;
-  border-radius: 0px;
+  padding: 0 80px;
   max-width: 1900px;
-  min-height: 100vh;
-  background-image: url(/images/ychooseus.jpg);
+  background: linear-gradient(to right, #f6f3ef 0%, #f6f3ef 100%);
+  /* background-image: url(/images/hero1.jpg); */
   background-size: cover;
-  background-position: center;
+  background-position: right;
+  outline: 1px solid #e7e3dd;
+  border-radius: 0px;
 }
 
-.why-choose-us {
-  display: flex;
-  justify-content: center;
+.card__content {
+  color: #e7e3dd;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 18px;
+  width: 100%;
+  min-height: 50vh;
 }
 
-.why-choose-us h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  height: 90px;
+.card__content h1 {
+  /* font-weight: 800; */
+  font-size: 3.9em;
+  cursor: default;
 }
 
-.why-choose-us .intro-text {
-  font-size: 2rem;
-  margin-bottom: 50px;
-  max-width: 1000px;
-  height: 120px;
-  margin: 0 auto;
+.card__content h1,
+.card__content p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-.features-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-size: 3rem;
-  max-width: 1800px;
-  /* background-color: #017c6e; */
-  flex-direction: column;
-  margin: 0 auto;
+.card__content p {
+  margin-top: 1rem;
+  font-size: 1.2em;
+  cursor: default;
 }
 
 /* Responsive Styles */
@@ -364,17 +367,7 @@ body {
   .hero__content {
     width: 100%;
     margin-bottom: 40px;
-  }
-
-  .why-choose-us .container {
-    border-radius: 0;
-    padding: 60px 10px;
-    height: 70vh;
-  }
-
-  .features-grid {
-    flex-direction: column;
-    font-size: 1.5rem;
+    min-height: 60%;
   }
 
   .navbar__item {
@@ -387,21 +380,22 @@ body {
     display: block;
     width: 100%;
   }
+}
 
-  .why-choose-us h2 {
-    font-size: 2rem;
-    margin-bottom: 0vh;
-    max-height: 6.5vh;
+@media (max-width: 768px) {
+  .card__container {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    text-align: center;
+    height: 70vh;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 
-  .why-choose-us .intro-text {
-    font-size: 1.2rem;
-    max-height: 9vh;
-    margin-bottom: 0vh;
-    padding-bottom: 1vh;
-  }
-
-  .features-grid {
-    margin-top: 0vh;
+  .card__content {
+    width: 100%;
+    margin-bottom: 40px;
+    min-height: 60%;
   }
 }
